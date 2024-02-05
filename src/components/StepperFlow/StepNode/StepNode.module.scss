@@ -1,0 +1,53 @@
+.step {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+
+  .state {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  .type {
+    flex-grow: 1;
+  }
+  &.completed {
+    .state {
+      background-image: url('@/assets/icons/check.svg');
+      background-color: #7aaf2d;
+      background-repeat: no-repeat;
+      border: none !important;
+    }
+    .type {
+      color: inherit !important;
+    }
+  }
+  &.ready {
+    .state {
+      border: 1px solid #808080;
+    }
+    .type {
+      color: #808080;
+    }
+  }
+  &.active {
+    .state {
+      border: 1px solid #538cea;
+    }
+    .type {
+      color: #538cea;
+    }
+  }
+  &:not(:last-child) {
+    border-right: 1px solid #80808080;
+  }
+}

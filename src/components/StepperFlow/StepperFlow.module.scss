@@ -1,0 +1,24 @@
+.stepper, .footer {
+    padding: 15px 0;
+}
+.mainContainer {
+    padding: 15px;
+}
+.stepper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    align-items: center;
+    border-bottom: 1px solid #5274c1;
+}
+.footer {
+    button {
+        width: 50%;
+        max-width: calc(1280px / 2);
+        min-width: calc(1280px / 3);
+    }
+}
+.finished {
+    text-align: center;
+}
+
+

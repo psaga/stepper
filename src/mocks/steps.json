@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Confirm booking",
+    "state": "completed"
+  },
+  {
+    "type": "Review order",
+    "state": "ready"
+  },
+  {
+    "type": "Complete move-in",
+    "state": "ready"
+  }
+]
