@@ -53,8 +53,8 @@ describe("StepperFlow as status flow", () => {
   const stepperElement = <StepperFlow initialSteps={initialSteps}></StepperFlow>;
 
   it("should display only the stepper without content", () => {
-    const { getByRole} = render(stepperElement);
-    expect(getByRole("stepper-header")).toBeDefined();
-    expect(getByRole("stepper-main-container").children.length).toBe(0);
+    const { getByTestId } = render(stepperElement);
+    expect(getByTestId("stepper-header")).toBeDefined();
+    expect(getByTestId("stepper-main-container").children.length).toBe(0);
   });
 });

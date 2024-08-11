@@ -37,12 +37,12 @@ export const StepperFlow = ({ title, initialSteps, children }: StepperProps) => 
   
   return (
     <>
-      <div className={styles.stepper} role="stepper-header">
+      <div className={styles.stepper} data-testid="stepper-header">
         {steps.map((step: Step, stepIdx: number) => (
           <StepNode step={step} key={stepIdx} isCurrentStep={stepIdx === currentStep} />
         ))}
       </div>
-      <div className={styles.mainContainer} role="stepper-main-container">
+      <div className={styles.mainContainer} data-testid="stepper-main-container">
         {children &&
           (!flowFinished ? (
             <>
